@@ -1,0 +1,102 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id       Int    @id @default(autoincrement()) @map("id")
+  name     String @db.VarChar(20) @map("name")
+  username String @unique @db.VarChar(20) @map("username")
+  password String @db.VarChar(255) @map("password")
+
+  @@map("users")
+}
+
+
+model Category {
+  id Int @id @default(autoincrement()) @map("id")
+  name String @db.VarChar(20) @map("name")
+  desc String @db.VarChar(255) @map("decription") 
+  products Product[]
+
+  @@map("categories")
+}
+
+model Sent {
+  id Int @id @default(autoincrement()) @map("id")
+  from String @db.VarChar(20) @map("from")
+  products Product[]
+
+  @@map("sents")
+}
+
+model Product {
+  id Int @id @default(autoincrement()) @map("id")
+  name String @db.VarChar(20) @map("name")
+  type String @db.VarChar(20) @map("type")
+  weight Int @map("weight")
+  desc String @db.VarChar(255) @map("decription") 
+  price Int @map("price")
+  createdAt DateTime @default(now()) @map("created_at")
+
+  sentId Int @map("sent_id")
+  categoryId Int @map("category_id")
+  pictures PictureProduct[]
+  discounts Discount[]
+
+  sent Sent @relation(fields: [sentId], references: [id])
+  category Category @relation(fields: [categoryId], references: [id])
+
+
+  @@map("products")
+}
+
+model PictureProduct {
+  id Int @id @default(autoincrement()) @map("id")
+  path String @db.VarChar(255) @map("path")
+  productId Int @map("product_id")
+
+  product Product @relation(fields: [productId], references: [id])
+
+  @@map("picture_products")
+}
+
+model Discount {
+  id Int @id @default(autoincrement()) @map("id")
+  name String @db.VarChar(100) @map("name")
+  percent Int @map("percent")
+  desc String @db.VarChar(255) @map("decription") 
+  productId Int @map("product_id")
+  startDate DateTime @map("start_date")
+  endDate DateTime @map("end_date")
+
+  product Product @relation(fields : [productId], references : [id])
+
+  @@map("discounts")
+}
+
+model Blog {
+  id Int @id @default(autoincrement()) @map("id")
+  content Json @map("content")
+
+  @@map("blogs")
+}
+
+model Banner {
+  id Int @id @default(autoincrement()) @map("id")
+  picturePath String @db.VarChar(255) @map("picture_path")
+  blogId Int @map("blog_id")
+  startDate DateTime @map("start_date")
+  endDate DateTime @map("end_date")
+}
