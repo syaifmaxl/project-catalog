@@ -3,6 +3,8 @@ import { PrismaClient } from "@prisma/client";
 import cookieParser from "cookie-parser";
 import cors from "cors"
 import * as env from "dotenv"
+import indexRouter from "./routers/web/index"
+
 
 env.config();
 
@@ -12,8 +14,6 @@ const allowedOrigins = (process.env.FE_SITE || "")
 
 const app : Application = express()
 const port = 3000
-
-app.use(express.json())
 
 const prisma = new PrismaClient()
 export { prisma }
@@ -33,6 +33,8 @@ app.use(
         credentials: true,
     })
 );
+
+app.use("/api",indexRouter)
 
 app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}`)
