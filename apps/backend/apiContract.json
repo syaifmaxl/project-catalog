@@ -1,0 +1,83 @@
+{
+    "API CONTRACT": {
+        "category": [
+            {
+                "url": "http://localhost:3000/api/category",
+                "method": "get",
+                "request": null,
+                "response": [
+                    {
+                        "id": 1,
+                        "name": "gajah",
+                        "desc": "wkwkwk"
+                    },
+                    {
+                        "id": 3,
+                        "name": "sarung tenun",
+                        "desc": "woilah wkwkw"
+                    },
+                    {
+                        "id": 4,
+                        "name": "sarung tenun",
+                        "desc": "woilah wkwkw"
+                    }
+                ]
+            },
+            {
+                "url": "http://localhost:3000/api/category/:id",
+                "method": "get",
+                "request": null,
+                "response": {
+                    "id": 1,
+                    "name": "gajah",
+                    "desc": "wkwkwk"
+                }
+            },
+            {
+                "url": "http://localhost:3000/api/category",
+                "method": "post",
+                "request": {
+                    "name": "wadimor",
+                    "desc": "tenun asli"
+                },
+                "response": {
+                    "message": "success",
+                    "result": {
+                        "id": 5,
+                        "name": "wadimor",
+                        "desc": "tenun asli"
+                    }
+                }
+            },
+            {
+                "url": "http://localhost:3000/api/category/:id",
+                "method": "put",
+                "request": {
+                    "name": "wadimor",
+                    "desc": "tenun asli"
+                },
+                "response": {
+                    "message": "success",
+                    "result": {
+                        "id": 1,
+                        "name": "wadimor",
+                        "desc": "tenun asli"
+                    }
+                }
+            },
+            {
+                "url": "http://localhost:3000/api/category/:id",
+                "method": "get",
+                "request": null,
+                "response": {
+                    "message": "success",
+                    "result": {
+                        "id": 5,
+                        "name": "wadimor",
+                        "desc": "tenun asli"
+                    }
+                }
+            }
+        ]
+    }
+}

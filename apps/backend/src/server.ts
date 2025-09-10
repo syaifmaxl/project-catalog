@@ -13,7 +13,7 @@ const allowedOrigins = (process.env.FE_SITE || "")
   .map(origin => origin.trim().replace(/\/$/, ""));
 
 const app : Application = express()
-const port = 3000
+const port = 4000
 
 const prisma = new PrismaClient()
 export { prisma }
