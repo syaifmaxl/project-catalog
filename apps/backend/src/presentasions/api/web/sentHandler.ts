@@ -27,7 +27,7 @@ export default class SentHandler{
         try {
             const data = req.body
             const result = await this.sentUsecase.createSent(data)
-            res.json(result)
+            res.json({message : "success", result})
         } catch (error) {
             res.status(500).json({ message : error instanceof Error ? error.message : String(error) })
         }
@@ -38,7 +38,7 @@ export default class SentHandler{
             const id = parseInt(req.params.id)
             const data = req.body
             const result = await this.sentUsecase.updateSent(id, data)
-            res.json({message : true, result})
+            res.json({message :  "success", result})
         } catch (error) {
             res.status(500).json({ message : error instanceof Error ? error.message : String(error) })
         }
@@ -48,7 +48,7 @@ export default class SentHandler{
         try {
             const id = parseInt(req.params.id)
             const result = await this.sentUsecase.deleteSent(id)
-            res.json({ message : true, result})
+            res.json({ message :  "success", result})
         } catch (error) {
             res.status(500).json({ message : error instanceof Error ? error.message : String(error) })
         }

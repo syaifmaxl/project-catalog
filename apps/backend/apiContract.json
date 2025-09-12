@@ -67,7 +67,7 @@
             },
             {
                 "url": "http://localhost:3000/api/category/:id",
-                "method": "get",
+                "method": "delete",
                 "request": null,
                 "response": {
                     "message": "success",
@@ -75,6 +75,226 @@
                         "id": 5,
                         "name": "wadimor",
                         "desc": "tenun asli"
+                    }
+                }
+            }
+        ],
+        "sent": [
+            {
+                "url": "http://localhost:3000/api/sent",
+                "method": "get",
+                "request": null,
+                "response": [
+                    {
+                        "id": 1,
+                        "from": "surabaya"
+                    },
+                    {
+                        "id": 3,
+                        "from": "malang"
+                    },
+                    {
+                        "id": 4,
+                        "from": "jogja"
+                    }
+                ]
+            },
+            {
+                "url": "http://localhost:3000/api/sent/:id",
+                "method": "get",
+                "request": null,
+                "response":  {
+                        "id": 1,
+                        "from": "surabaya"
+                    }
+            },
+            {
+                "url": "http://localhost:3000/api/sent",
+                "method": "post",
+                "request":  {
+                        "from": "surabaya"
+                    },
+                "response": {
+                    "message": "success",
+                    "result":  {
+                        "id": 1,
+                        "from": "surabaya"
+                    }
+                }
+            },
+            {
+                "url": "http://localhost:3000/api/sent/:id",
+                "method": "put",
+                "request":  {
+                        "id": 1,
+                        "from": "surabaya"
+                    },
+                "response": {
+                    "message": "success",
+                    "result":  {
+                        "id": 1,
+                        "from": "surabaya"
+                    }
+                }
+            },
+            {
+                "url": "http://localhost:3000/api/sent/:id",
+                "method": "delete",
+                "request": null,
+                "response": {
+                    "message": "success",
+                    "result": {
+                    "message": "success",
+                    "result":  {
+                        "id": 1,
+                        "from": "surabaya"
+                    }
+                }
+                }
+            }
+        ],
+        "product": [
+            {
+                "url": "http://localhost:4000/api/product",
+                "content-type": "application/json",
+                "method": "get",
+                "request": null,
+                "response": [
+                    {
+                        "id": 1,
+                        "name": "Batik Sarung",
+                        "type": "kain",
+                        "weight": 500,
+                        "desc": "Sarung batik asli",
+                        "price": 120000,
+                        "sentId": 2,
+                        "categoryId": 3,
+                        "pictures": [
+                            {
+                                "id": 10,
+                                "path": "/uploads/1757677536354.jpg"
+                            },
+                            {
+                                "id": 11,
+                                "path": "/uploads/1757677536355.jpg"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "url": "http://localhost:4000/api/product/:id",
+                "content-type": "application/json",
+                "method": "get",
+                "request": null,
+                "response": {
+                    "id": 1,
+                    "name": "Batik Sarung",
+                    "type": "kain",
+                    "weight": 500,
+                    "desc": "Sarung batik asli",
+                    "price": 120000,
+                    "sentId": 2,
+                    "categoryId": 3,
+                    "pictures": [
+                        {
+                            "id": 10,
+                            "path": "/uploads/1757677536354.jpg"
+                        }
+                    ]
+                }
+            },
+            {
+                "url": "http://localhost:4000/api/product",
+                "content-type": "multipart/form-data",
+                "method": "post",
+                "request": {
+                    "name": "Ulos Batak",
+                    "type": "kain",
+                    "weight": 600,
+                    "desc": "Ulos khas Batak",
+                    "price": 250000,
+                    "sentId": 3,
+                    "categoryId": 2,
+                    "picture": [
+                        "(binary image file)"
+                    ]
+                },
+                "response": {
+                    "message": "success",
+                    "result": {
+                        "id": 3,
+                        "name": "Ulos Batak",
+                        "type": "kain",
+                        "weight": 600,
+                        "desc": "Ulos khas Batak",
+                        "price": 250000,
+                        "sentId": 3,
+                        "categoryId": 2,
+                        "pictures": [
+                            {
+                                "id": 12,
+                                "path": "/uploads/1757677536356.jpg"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "url": "http://localhost:4000/api/product/:id",
+                "content-type": "multipart/form-data",
+                "method": "put",
+                "request": {
+                    "name": "Batik Mega Mendung",
+                    "type": "kain",
+                    "weight": 520,
+                    "desc": "Batik motif Mega Mendung",
+                    "price": 150000,
+                    "sentId": 2,
+                    "categoryId": 3,
+                    "oldPictures": [
+                        10
+                    ],
+                    "picture": [
+                        "(binary image file baru)"
+                    ]
+                },
+                "response": {
+                    "message": "success",
+                    "result": {
+                        "id": 1,
+                        "name": "Batik Mega Mendung",
+                        "type": "kain",
+                        "weight": 520,
+                        "desc": "Batik motif Mega Mendung",
+                        "price": 150000,
+                        "sentId": 2,
+                        "categoryId": 3,
+                        "pictures": [
+                            {
+                                "id": 13,
+                                "path": "/uploads/1757677536357.jpg"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "url": "http://localhost:4000/api/product/:id",
+                "content-type": "application/json",
+                "method": "delete",
+                "request": null,
+                "response": {
+                    "message": "success",
+                    "result": {
+                        "id": 1,
+                        "name": "Batik Mega Mendung",
+                        "type": "kain",
+                        "weight": 520,
+                        "desc": "Batik motif Mega Mendung",
+                        "price": 150000,
+                        "sentId": 2,
+                        "categoryId": 3
                     }
                 }
             }
