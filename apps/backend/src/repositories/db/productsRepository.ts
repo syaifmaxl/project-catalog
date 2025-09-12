@@ -6,6 +6,8 @@ export default class ProductsRepository implements IproductsRepository {
     getAllProducts(): Promise<Product[]> {
         return prisma.product.findMany({
             include: {
+                category: true,
+                sent : true,
                 pictures: true
             }
         })
@@ -15,6 +17,8 @@ export default class ProductsRepository implements IproductsRepository {
         return prisma.product.findUnique({
             where: { id },
             include: {
+                category: true,
+                sent : true,
                 pictures: true
             }
         })

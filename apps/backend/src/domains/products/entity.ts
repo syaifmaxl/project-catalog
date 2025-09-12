@@ -1,3 +1,6 @@
+import { Category } from "../categories/entity"
+import { Sent } from "../sents/entity"
+
 export interface PictureProduct{
     id: number,
     path: string,
@@ -13,6 +16,8 @@ export interface Product{
     price : number,
     sentId : number,
     categoryId : number
+    sent? : Sent,
+    category?: Category,
     pictures : PictureProduct[]
 }
 

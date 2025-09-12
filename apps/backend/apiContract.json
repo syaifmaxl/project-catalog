@@ -103,20 +103,20 @@
                 "url": "http://localhost:3000/api/sent/:id",
                 "method": "get",
                 "request": null,
-                "response":  {
-                        "id": 1,
-                        "from": "surabaya"
-                    }
+                "response": {
+                    "id": 1,
+                    "from": "surabaya"
+                }
             },
             {
                 "url": "http://localhost:3000/api/sent",
                 "method": "post",
-                "request":  {
-                        "from": "surabaya"
-                    },
+                "request": {
+                    "from": "surabaya"
+                },
                 "response": {
                     "message": "success",
-                    "result":  {
+                    "result": {
                         "id": 1,
                         "from": "surabaya"
                     }
@@ -125,13 +125,13 @@
             {
                 "url": "http://localhost:3000/api/sent/:id",
                 "method": "put",
-                "request":  {
-                        "id": 1,
-                        "from": "surabaya"
-                    },
+                "request": {
+                    "id": 1,
+                    "from": "surabaya"
+                },
                 "response": {
                     "message": "success",
-                    "result":  {
+                    "result": {
                         "id": 1,
                         "from": "surabaya"
                     }
@@ -144,12 +144,12 @@
                 "response": {
                     "message": "success",
                     "result": {
-                    "message": "success",
-                    "result":  {
-                        "id": 1,
-                        "from": "surabaya"
+                        "message": "success",
+                        "result": {
+                            "id": 1,
+                            "from": "surabaya"
+                        }
                     }
-                }
                 }
             }
         ],
@@ -161,22 +161,29 @@
                 "request": null,
                 "response": [
                     {
-                        "id": 1,
-                        "name": "Batik Sarung",
-                        "type": "kain",
-                        "weight": 500,
-                        "desc": "Sarung batik asli",
-                        "price": 120000,
-                        "sentId": 2,
-                        "categoryId": 3,
+                        "id": 10,
+                        "name": "dw",
+                        "type": "wqde",
+                        "weight": 123,
+                        "desc": "ewfwef",
+                        "price": 123,
+                        "createdAt": "2025-09-12T13:05:38.632Z",
+                        "sentId": 1,
+                        "categoryId": 1,
+                        "category": {
+                            "id": 1,
+                            "name": "wadimor",
+                            "desc": "tenun asli"
+                        },
+                        "sent": {
+                            "id": 1,
+                            "from": "surabaya"
+                        },
                         "pictures": [
                             {
-                                "id": 10,
-                                "path": "/uploads/1757677536354.jpg"
-                            },
-                            {
-                                "id": 11,
-                                "path": "/uploads/1757677536355.jpg"
+                                "id": 22,
+                                "path": "/uploads/1757682338617.jpg",
+                                "productId": 10
                             }
                         ]
                     }
@@ -188,18 +195,29 @@
                 "method": "get",
                 "request": null,
                 "response": {
-                    "id": 1,
-                    "name": "Batik Sarung",
-                    "type": "kain",
-                    "weight": 500,
-                    "desc": "Sarung batik asli",
-                    "price": 120000,
-                    "sentId": 2,
-                    "categoryId": 3,
+                    "id": 10,
+                    "name": "dw",
+                    "type": "wqde",
+                    "weight": 123,
+                    "desc": "ewfwef",
+                    "price": 123,
+                    "createdAt": "2025-09-12T13:05:38.632Z",
+                    "sentId": 1,
+                    "categoryId": 1,
+                    "category": {
+                        "id": 1,
+                        "name": "wadimor",
+                        "desc": "tenun asli"
+                    },
+                    "sent": {
+                        "id": 1,
+                        "from": "surabaya"
+                    },
                     "pictures": [
                         {
-                            "id": 10,
-                            "path": "/uploads/1757677536354.jpg"
+                            "id": 22,
+                            "path": "/uploads/1757682338617.jpg",
+                            "productId": 10
                         }
                     ]
                 }
