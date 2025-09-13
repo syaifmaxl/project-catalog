@@ -16,7 +16,7 @@ const Navbar: React.FC = () => {
 
   return (
     <nav
-      className="fixed top-4 left-1/2 -translate-x-1/2 w-[95%] max-w-6xl mx-auto px-6 py-4 z-50 
+      className="fixed top-3.5 left-1/2 -translate-x-1/2 w-[95%] max-w-6xl mx-auto px-4 py-3.5 z-50 
                  flex justify-between items-center
                  bg-white/10 backdrop-blur-lg border border-white/20 rounded-full shadow-lg"
     >

@@ -1,19 +1,22 @@
 import Navbar from "./components/layout/Navbar/Navbar";
+import HomePage from "./pages/HomesPage";
 
 function App() {
   return (
-    <div
-      className="min-h-screen text-white 
-                 bg-gradient-to-br from-slate-900 via-cyan-900 to-emerald-900
-                 bg-300% animate-gradient"
-    >
-      <Navbar />
-
+    <div className="relative min-h-screen">
+      <div
+        className="absolute inset-0 z-0 
+                   bg-gradient-to-br from-slate-900 via-cyan-900 to-emerald-900
+                   bg-300% animate-gradient"
+      />
       <div
         className="absolute inset-0 z-10 
-                   backdrop-blur-xl bg-white/5"
-      >
-      </div>
+                   backdrop-blur-xl bg-black/20"
+      />
+      <Navbar />
+      <main className="relative z-20 pt-10">
+        <HomePage />
+      </main>
     </div>
   );
 }
