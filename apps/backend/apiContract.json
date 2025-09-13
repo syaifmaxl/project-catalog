@@ -316,6 +316,166 @@
                     }
                 }
             }
+        ],
+        "discount": [
+            {
+                "url": "http://localhost:4000/api/discount",
+                "content-type": "application/json",
+                "method": "get",
+                "request": null,
+                "response": [
+                    {
+                        "id": 1,
+                        "name": "Diskon September",
+                        "percent": 20,
+                        "desc": "Promo besar untuk produk pilihan",
+                        "startDate": "2025-09-01T00:00:00.000Z",
+                        "endDate": "2025-09-30T23:59:59.999Z",
+                        "productDiscs": [
+                            {
+                                "id": 1,
+                                "productId": 10,
+                                "discountId": 1,
+                                "product": {
+                                    "id": 10,
+                                    "name": "dw",
+                                    "type": "wqde",
+                                    "weight": 123,
+                                    "desc": "ewfwef",
+                                    "price": 123,
+                                    "createdAt": "2025-09-12T13:05:38.632Z",
+                                    "sentId": 1,
+                                    "categoryId": 1
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "url": "http://localhost:4000/api/discount/:id",
+                "content-type": "application/json",
+                "method": "get",
+                "request": null,
+                "response": {
+                    "id": 1,
+                    "name": "Diskon September",
+                    "percent": 20,
+                    "desc": "Promo besar untuk produk pilihan",
+                    "startDate": "2025-09-01T00:00:00.000Z",
+                    "endDate": "2025-09-30T23:59:59.999Z",
+                    "productDiscs": [
+                        {
+                            "id": 1,
+                            "productId": 10,
+                            "discountId": 1,
+                            "product": {
+                                "id": 10,
+                                "name": "dw",
+                                "type": "wqde",
+                                "weight": 123,
+                                "desc": "ewfwef",
+                                "price": 123
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "url": "http://localhost:4000/api/discount",
+                "content-type": "application/json",
+                "method": "post",
+                "request": {
+                    "name": "Diskon Batik",
+                    "percent": 15,
+                    "desc": "Promo batik spesial",
+                    "startDate": "2025-10-01T00:00:00.000Z",
+                    "endDate": "2025-10-15T23:59:59.999Z",
+                    "productId": [
+                        10,
+                        12
+                    ]
+                },
+                "response": {
+                    "message": "success",
+                    "result": {
+                        "id": 2,
+                        "name": "Diskon Batik",
+                        "percent": 15,
+                        "desc": "Promo batik spesial",
+                        "startDate": "2025-10-01T00:00:00.000Z",
+                        "endDate": "2025-10-15T23:59:59.999Z",
+                        "productDiscs": [
+                            {
+                                "id": 5,
+                                "productId": 10,
+                                "discountId": 2
+                            },
+                            {
+                                "id": 6,
+                                "productId": 12,
+                                "discountId": 2
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "url": "http://localhost:4000/api/discount/:id",
+                "content-type": "application/json",
+                "method": "put",
+                "request": {
+                    "name": "Diskon Batik Update",
+                    "percent": 20,
+                    "desc": "Promo batik diperpanjang",
+                    "startDate": "2025-10-01T00:00:00.000Z",
+                    "endDate": "2025-10-31T23:59:59.999Z",
+                    "productId": [
+                        12,
+                        13
+                    ]
+                },
+                "response": {
+                    "message": "success",
+                    "result": {
+                        "id": 2,
+                        "name": "Diskon Batik Update",
+                        "percent": 20,
+                        "desc": "Promo batik diperpanjang",
+                        "startDate": "2025-10-01T00:00:00.000Z",
+                        "endDate": "2025-10-31T23:59:59.999Z",
+                        "productDiscs": [
+                            {
+                                "id": 6,
+                                "productId": 12,
+                                "discountId": 2
+                            },
+                            {
+                                "id": 7,
+                                "productId": 13,
+                                "discountId": 2
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "url": "http://localhost:4000/api/discount/:id",
+                "content-type": "application/json",
+                "method": "delete",
+                "request": null,
+                "response": {
+                    "message": "success",
+                    "result": {
+                        "id": 2,
+                        "name": "Diskon Batik Update",
+                        "percent": 20,
+                        "desc": "Promo batik diperpanjang",
+                        "startDate": "2025-10-01T00:00:00.000Z",
+                        "endDate": "2025-10-31T23:59:59.999Z"
+                    }
+                }
+            }
         ]
     }
 }

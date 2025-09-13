@@ -52,7 +52,8 @@ model Product {
   sentId Int @map("sent_id")
   categoryId Int @map("category_id")
   pictures PictureProduct[]
-  discounts Discount[]
+  
+  productDiscs ProductDisc[]
 
   sent Sent @relation(fields: [sentId], references: [id])
   category Category @relation(fields: [categoryId], references: [id])
@@ -70,19 +71,27 @@ model PictureProduct {
 
   @@map("picture_products")
 }
-
 model Discount {
   id Int @id @default(autoincrement()) @map("id")
   name String @db.VarChar(100) @map("name")
   percent Int @map("percent")
   desc String @db.VarChar(255) @map("decription") 
-  productId Int @map("product_id")
   startDate DateTime @map("start_date")
   endDate DateTime @map("end_date")
 
-  product Product @relation(fields : [productId], references : [id])
+  productDiscs ProductDisc[]
 
   @@map("discounts")
+}
+model ProductDisc {
+  id Int @id @default(autoincrement()) @map("id")
+  productId Int @map("product_id")
+  discountId Int @map("discount_id")
+
+  product Product @relation(fields: [productId], references: [id])
+  discount Discount @relation(fields: [discountId], references: [id])
+
+  @@map("product_discounts")
 }
 
 model Blog {
