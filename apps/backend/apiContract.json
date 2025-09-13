@@ -1,0 +1,481 @@
+{
+    "API CONTRACT": {
+        "category": [
+            {
+                "url": "http://localhost:3000/api/category",
+                "method": "get",
+                "request": null,
+                "response": [
+                    {
+                        "id": 1,
+                        "name": "gajah",
+                        "desc": "wkwkwk"
+                    },
+                    {
+                        "id": 3,
+                        "name": "sarung tenun",
+                        "desc": "woilah wkwkw"
+                    },
+                    {
+                        "id": 4,
+                        "name": "sarung tenun",
+                        "desc": "woilah wkwkw"
+                    }
+                ]
+            },
+            {
+                "url": "http://localhost:3000/api/category/:id",
+                "method": "get",
+                "request": null,
+                "response": {
+                    "id": 1,
+                    "name": "gajah",
+                    "desc": "wkwkwk"
+                }
+            },
+            {
+                "url": "http://localhost:3000/api/category",
+                "method": "post",
+                "request": {
+                    "name": "wadimor",
+                    "desc": "tenun asli"
+                },
+                "response": {
+                    "message": "success",
+                    "result": {
+                        "id": 5,
+                        "name": "wadimor",
+                        "desc": "tenun asli"
+                    }
+                }
+            },
+            {
+                "url": "http://localhost:3000/api/category/:id",
+                "method": "put",
+                "request": {
+                    "name": "wadimor",
+                    "desc": "tenun asli"
+                },
+                "response": {
+                    "message": "success",
+                    "result": {
+                        "id": 1,
+                        "name": "wadimor",
+                        "desc": "tenun asli"
+                    }
+                }
+            },
+            {
+                "url": "http://localhost:3000/api/category/:id",
+                "method": "delete",
+                "request": null,
+                "response": {
+                    "message": "success",
+                    "result": {
+                        "id": 5,
+                        "name": "wadimor",
+                        "desc": "tenun asli"
+                    }
+                }
+            }
+        ],
+        "sent": [
+            {
+                "url": "http://localhost:3000/api/sent",
+                "method": "get",
+                "request": null,
+                "response": [
+                    {
+                        "id": 1,
+                        "from": "surabaya"
+                    },
+                    {
+                        "id": 3,
+                        "from": "malang"
+                    },
+                    {
+                        "id": 4,
+                        "from": "jogja"
+                    }
+                ]
+            },
+            {
+                "url": "http://localhost:3000/api/sent/:id",
+                "method": "get",
+                "request": null,
+                "response": {
+                    "id": 1,
+                    "from": "surabaya"
+                }
+            },
+            {
+                "url": "http://localhost:3000/api/sent",
+                "method": "post",
+                "request": {
+                    "from": "surabaya"
+                },
+                "response": {
+                    "message": "success",
+                    "result": {
+                        "id": 1,
+                        "from": "surabaya"
+                    }
+                }
+            },
+            {
+                "url": "http://localhost:3000/api/sent/:id",
+                "method": "put",
+                "request": {
+                    "id": 1,
+                    "from": "surabaya"
+                },
+                "response": {
+                    "message": "success",
+                    "result": {
+                        "id": 1,
+                        "from": "surabaya"
+                    }
+                }
+            },
+            {
+                "url": "http://localhost:3000/api/sent/:id",
+                "method": "delete",
+                "request": null,
+                "response": {
+                    "message": "success",
+                    "result": {
+                        "message": "success",
+                        "result": {
+                            "id": 1,
+                            "from": "surabaya"
+                        }
+                    }
+                }
+            }
+        ],
+        "product": [
+            {
+                "url": "http://localhost:4000/api/product",
+                "content-type": "application/json",
+                "method": "get",
+                "request": null,
+                "response": [
+                    {
+                        "id": 10,
+                        "name": "dw",
+                        "type": "wqde",
+                        "weight": 123,
+                        "desc": "ewfwef",
+                        "price": 123,
+                        "createdAt": "2025-09-12T13:05:38.632Z",
+                        "sentId": 1,
+                        "categoryId": 1,
+                        "category": {
+                            "id": 1,
+                            "name": "wadimor",
+                            "desc": "tenun asli"
+                        },
+                        "sent": {
+                            "id": 1,
+                            "from": "surabaya"
+                        },
+                        "pictures": [
+                            {
+                                "id": 22,
+                                "path": "/uploads/1757682338617.jpg",
+                                "productId": 10
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "url": "http://localhost:4000/api/product/:id",
+                "content-type": "application/json",
+                "method": "get",
+                "request": null,
+                "response": {
+                    "id": 10,
+                    "name": "dw",
+                    "type": "wqde",
+                    "weight": 123,
+                    "desc": "ewfwef",
+                    "price": 123,
+                    "createdAt": "2025-09-12T13:05:38.632Z",
+                    "sentId": 1,
+                    "categoryId": 1,
+                    "category": {
+                        "id": 1,
+                        "name": "wadimor",
+                        "desc": "tenun asli"
+                    },
+                    "sent": {
+                        "id": 1,
+                        "from": "surabaya"
+                    },
+                    "pictures": [
+                        {
+                            "id": 22,
+                            "path": "/uploads/1757682338617.jpg",
+                            "productId": 10
+                        }
+                    ]
+                }
+            },
+            {
+                "url": "http://localhost:4000/api/product",
+                "content-type": "multipart/form-data",
+                "method": "post",
+                "request": {
+                    "name": "Ulos Batak",
+                    "type": "kain",
+                    "weight": 600,
+                    "desc": "Ulos khas Batak",
+                    "price": 250000,
+                    "sentId": 3,
+                    "categoryId": 2,
+                    "picture": [
+                        "(binary image file)"
+                    ]
+                },
+                "response": {
+                    "message": "success",
+                    "result": {
+                        "id": 3,
+                        "name": "Ulos Batak",
+                        "type": "kain",
+                        "weight": 600,
+                        "desc": "Ulos khas Batak",
+                        "price": 250000,
+                        "sentId": 3,
+                        "categoryId": 2,
+                        "pictures": [
+                            {
+                                "id": 12,
+                                "path": "/uploads/1757677536356.jpg"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "url": "http://localhost:4000/api/product/:id",
+                "content-type": "multipart/form-data",
+                "method": "put",
+                "request": {
+                    "name": "Batik Mega Mendung",
+                    "type": "kain",
+                    "weight": 520,
+                    "desc": "Batik motif Mega Mendung",
+                    "price": 150000,
+                    "sentId": 2,
+                    "categoryId": 3,
+                    "oldPictures": [
+                        10
+                    ],
+                    "picture": [
+                        "(binary image file baru)"
+                    ]
+                },
+                "response": {
+                    "message": "success",
+                    "result": {
+                        "id": 1,
+                        "name": "Batik Mega Mendung",
+                        "type": "kain",
+                        "weight": 520,
+                        "desc": "Batik motif Mega Mendung",
+                        "price": 150000,
+                        "sentId": 2,
+                        "categoryId": 3,
+                        "pictures": [
+                            {
+                                "id": 13,
+                                "path": "/uploads/1757677536357.jpg"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "url": "http://localhost:4000/api/product/:id",
+                "content-type": "application/json",
+                "method": "delete",
+                "request": null,
+                "response": {
+                    "message": "success",
+                    "result": {
+                        "id": 1,
+                        "name": "Batik Mega Mendung",
+                        "type": "kain",
+                        "weight": 520,
+                        "desc": "Batik motif Mega Mendung",
+                        "price": 150000,
+                        "sentId": 2,
+                        "categoryId": 3
+                    }
+                }
+            }
+        ],
+        "discount": [
+            {
+                "url": "http://localhost:4000/api/discount",
+                "content-type": "application/json",
+                "method": "get",
+                "request": null,
+                "response": [
+                    {
+                        "id": 1,
+                        "name": "Diskon September",
+                        "percent": 20,
+                        "desc": "Promo besar untuk produk pilihan",
+                        "startDate": "2025-09-01T00:00:00.000Z",
+                        "endDate": "2025-09-30T23:59:59.999Z",
+                        "productDiscs": [
+                            {
+                                "id": 1,
+                                "productId": 10,
+                                "discountId": 1,
+                                "product": {
+                                    "id": 10,
+                                    "name": "dw",
+                                    "type": "wqde",
+                                    "weight": 123,
+                                    "desc": "ewfwef",
+                                    "price": 123,
+                                    "createdAt": "2025-09-12T13:05:38.632Z",
+                                    "sentId": 1,
+                                    "categoryId": 1
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "url": "http://localhost:4000/api/discount/:id",
+                "content-type": "application/json",
+                "method": "get",
+                "request": null,
+                "response": {
+                    "id": 1,
+                    "name": "Diskon September",
+                    "percent": 20,
+                    "desc": "Promo besar untuk produk pilihan",
+                    "startDate": "2025-09-01T00:00:00.000Z",
+                    "endDate": "2025-09-30T23:59:59.999Z",
+                    "productDiscs": [
+                        {
+                            "id": 1,
+                            "productId": 10,
+                            "discountId": 1,
+                            "product": {
+                                "id": 10,
+                                "name": "dw",
+                                "type": "wqde",
+                                "weight": 123,
+                                "desc": "ewfwef",
+                                "price": 123
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "url": "http://localhost:4000/api/discount",
+                "content-type": "application/json",
+                "method": "post",
+                "request": {
+                    "name": "Diskon Batik",
+                    "percent": 15,
+                    "desc": "Promo batik spesial",
+                    "startDate": "2025-10-01T00:00:00.000Z",
+                    "endDate": "2025-10-15T23:59:59.999Z",
+                    "productId": [
+                        10,
+                        12
+                    ]
+                },
+                "response": {
+                    "message": "success",
+                    "result": {
+                        "id": 2,
+                        "name": "Diskon Batik",
+                        "percent": 15,
+                        "desc": "Promo batik spesial",
+                        "startDate": "2025-10-01T00:00:00.000Z",
+                        "endDate": "2025-10-15T23:59:59.999Z",
+                        "productDiscs": [
+                            {
+                                "id": 5,
+                                "productId": 10,
+                                "discountId": 2
+                            },
+                            {
+                                "id": 6,
+                                "productId": 12,
+                                "discountId": 2
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "url": "http://localhost:4000/api/discount/:id",
+                "content-type": "application/json",
+                "method": "put",
+                "request": {
+                    "name": "Diskon Batik Update",
+                    "percent": 20,
+                    "desc": "Promo batik diperpanjang",
+                    "startDate": "2025-10-01T00:00:00.000Z",
+                    "endDate": "2025-10-31T23:59:59.999Z",
+                    "productId": [
+                        12,
+                        13
+                    ]
+                },
+                "response": {
+                    "message": "success",
+                    "result": {
+                        "id": 2,
+                        "name": "Diskon Batik Update",
+                        "percent": 20,
+                        "desc": "Promo batik diperpanjang",
+                        "startDate": "2025-10-01T00:00:00.000Z",
+                        "endDate": "2025-10-31T23:59:59.999Z",
+                        "productDiscs": [
+                            {
+                                "id": 6,
+                                "productId": 12,
+                                "discountId": 2
+                            },
+                            {
+                                "id": 7,
+                                "productId": 13,
+                                "discountId": 2
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "url": "http://localhost:4000/api/discount/:id",
+                "content-type": "application/json",
+                "method": "delete",
+                "request": null,
+                "response": {
+                    "message": "success",
+                    "result": {
+                        "id": 2,
+                        "name": "Diskon Batik Update",
+                        "percent": 20,
+                        "desc": "Promo batik diperpanjang",
+                        "startDate": "2025-10-01T00:00:00.000Z",
+                        "endDate": "2025-10-31T23:59:59.999Z"
+                    }
+                }
+            }
+        ]
+    }
+}
