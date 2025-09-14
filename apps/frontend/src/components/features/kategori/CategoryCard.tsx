@@ -9,8 +9,8 @@ const CategoryCard: React.FC<CategoryCardProps> = ({ image, name }) => {
   return (
     <div
       className="relative group overflow-hidden rounded-lg cursor-pointer
-                   w-32 h-44 flex-shrink-0
-                   lg:w-full lg:h-auto lg:aspect-[4/5]"
+                   w-38 h-44 flex-shrink-0
+                   lg:w-full lg:h-full lg:aspect-[4/5]"
     >
       <img
         src={image}
