@@ -75,7 +75,7 @@ const HomePage: React.FC = () => {
         .swiper-button-prev, .swiper-button-next { color: #ffffff; }
       `}</style>
 
-      <div className="pt-16 pb-10">
+      <div className="pt-16 pb-7">
         <Swiper
           centeredSlides={true}
           slidesPerView={"auto"}
