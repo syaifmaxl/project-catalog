@@ -4,6 +4,7 @@ import sentsRouter from "./sentsRouter"
 import picturesRouter from "./picturesRouter"
 import productsRouter from "./productsRouter"
 import discountRouter from "./discountsRouter"
+import blogsRouter from "./blogsRouter"
 
 const router = express.Router()
 
@@ -12,5 +13,6 @@ router.use(sentsRouter)
 router.use(picturesRouter)
 router.use(productsRouter)
 router.use(discountRouter)
+router.use(blogsRouter)
 
 export default router

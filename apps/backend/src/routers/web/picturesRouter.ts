@@ -7,7 +7,7 @@ const router = express.Router()
 
 const picturesHandler = new PicturesHandler()
 
-// router.post("/up", upload.array("picture", 3), picturesHandler.testUploud)
+router.post("/uploads", upload.array("picture", 3), picturesHandler.testUploud)
 router.get("/uploads/:name", picturesHandler.testRead)
 
 export default router

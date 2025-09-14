@@ -96,7 +96,11 @@ model ProductDisc {
 
 model Blog {
   id Int @id @default(autoincrement()) @map("id")
-  content Json @map("content")
+  title String @db.VarChar(100) @map("title")
+  contentDelta Json @map("content_delta")
+  contentHtml String @map("content_html")
+  createdAt DateTime @default(now()) @map("created_at") 
+  updatedAt DateTime? @map("updated_at")
 
   @@map("blogs")
 }
