@@ -56,7 +56,6 @@ CREATE TABLE `discounts` (
     `name` VARCHAR(100) NOT NULL,
     `percent` INTEGER NOT NULL,
     `decription` VARCHAR(255) NOT NULL,
-    `product_id` INTEGER NOT NULL,
     `start_date` DATETIME(3) NOT NULL,
     `end_date` DATETIME(3) NOT NULL,
 
@@ -64,9 +63,22 @@ CREATE TABLE `discounts` (
 ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 -- CreateTable
+CREATE TABLE `product_discounts` (
+    `id` INTEGER NOT NULL AUTO_INCREMENT,
+    `product_id` INTEGER NOT NULL,
+    `discount_id` INTEGER NOT NULL,
+
+    PRIMARY KEY (`id`)
+) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+-- CreateTable
 CREATE TABLE `blogs` (
     `id` INTEGER NOT NULL AUTO_INCREMENT,
-    `content` JSON NOT NULL,
+    `title` VARCHAR(100) NOT NULL,
+    `content_delta` JSON NOT NULL,
+    `content_html` VARCHAR(191) NOT NULL,
+    `created_at` DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
+    `updated_at` DATETIME(3) NULL,
 
     PRIMARY KEY (`id`)
 ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
@@ -92,4 +104,7 @@ ALTER TABLE `products` ADD CONSTRAINT `products_category_id_fkey` FOREIGN KEY (`
 ALTER TABLE `picture_products` ADD CONSTRAINT `picture_products_product_id_fkey` FOREIGN KEY (`product_id`) REFERENCES `products`(`id`) ON DELETE RESTRICT ON UPDATE CASCADE;
 
 -- AddForeignKey
-ALTER TABLE `discounts` ADD CONSTRAINT `discounts_product_id_fkey` FOREIGN KEY (`product_id`) REFERENCES `products`(`id`) ON DELETE RESTRICT ON UPDATE CASCADE;
+ALTER TABLE `product_discounts` ADD CONSTRAINT `product_discounts_product_id_fkey` FOREIGN KEY (`product_id`) REFERENCES `products`(`id`) ON DELETE RESTRICT ON UPDATE CASCADE;
+
+-- AddForeignKey
+ALTER TABLE `product_discounts` ADD CONSTRAINT `product_discounts_discount_id_fkey` FOREIGN KEY (`discount_id`) REFERENCES `discounts`(`id`) ON DELETE RESTRICT ON UPDATE CASCADE;
