@@ -12,12 +12,12 @@ const Footer = () => {
         {/* contact left */}
         <div>
           <h1 className="font-bold text-2xl">SARUNG</h1>
-          <p className="mt-2 text-sm md:text-base leading-relaxed">
+          <p className="mt-2 text-xs md:text-base leading-relaxed">
             Sarung Mangga Official adalah website resmi Sarung Mangga untuk melayani penjualan melalui online. 
             Sarung Mangga produksi PT Panggung Jaya Indah Textile (PT PAJITEX) selalu tampil dengan desain yang 
             menawan menggunakan paduan warna yang berani sehingga mampu menampilkan keindahan yang tidak biasa.
           </p>
-          <p className="font-semibold mt-4">Sosial Media</p>
+          <p className="font-bold mt-4 ">Sosial Media</p>
           <div className="mt-2 flex gap-3">
             <img src={whatsapp} alt="whatsapp" className="w-8 md:w-10"/>
             <img src={instagram} alt="instagram" className="w-8 md:w-10"/>
@@ -29,7 +29,7 @@ const Footer = () => {
         {/* content middle */}
         <div>
           <h1 className="font-bold text-lg md:text-xl mb-2">Jadwal Toko</h1>
-          <ul className="space-y-2 text-sm md:text-base">
+          <ul className="space-y-2 text-xs md:text-base">
             <li>Proses packing & pengiriman dilakukan Senin - Jumat pk. 09.00 - 15.00 WIB.</li>
             <li>Hari Sabtu, Ahad, & libur nasional: libur. Transaksi diproses hari kerja berikutnya.</li>
             <li>Transaksi dengan pembayaran sebelum pk. 13.00 WIB akan diproses hari yang sama.</li>
@@ -39,18 +39,18 @@ const Footer = () => {
         {/* content right */}
         <div>
           <h1 className="font-bold text-lg md:text-xl mb-2">Informasi</h1>
-          <ul className="space-y-2 text-sm md:text-base mb-4">
+          <ul className="space-y-2 text-sm md:text-base mb-4 cursor-pointer">
             <li>Tentang</li>
             <li>Kebijakan Privasi</li>
             <li>Kebijakan Layanan</li>
             <li>Panduan Belanja</li>
           </ul>
           <h1 className="font-bold text-lg md:text-xl">Kontak Kami</h1>
-          <div className="mt-3 flex gap-2 justify-center items-center w-max">
+          <div className="mt-3 flex gap-2 justify-center items-center w-max cursor-pointer">
             <Mail size={20}/>
             <p>banggabersarung.official@gmail.com</p>
           </div>
-          <div className="mt-3 flex gap-2 justify-center items-center w-max">
+          <div className="mt-3 flex gap-2 justify-center items-center w-max cursor-pointer">
             <Phone size={20}/>
             <p>+62 81358838686</p>
           </div>

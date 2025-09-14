@@ -21,6 +21,12 @@ const heroSlidesData = [
   {
     image: "https://www.banggabersarung.com/img/banners/Banner-Promo-Gopay.jpg",
   },
+  {
+    image: "https://www.banggabersarung.com/img/banners/Banner-Jacquard.jpg",
+  },
+  {
+    image: "https://www.banggabersarung.com/img/banners/Banner-Classy.jpg",
+  },
 ];
 
 const categoriesData = [
@@ -75,7 +81,7 @@ const HomePage: React.FC = () => {
         .swiper-button-prev, .swiper-button-next { color: #ffffff; }
       `}</style>
 
-      <div className="pt-16 pb-7">
+      <div className="pt-20 pb-7">
         <Swiper
           centeredSlides={true}
           slidesPerView={"auto"}
