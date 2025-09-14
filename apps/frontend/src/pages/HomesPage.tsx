@@ -109,11 +109,7 @@ const HomePage: React.FC = () => {
         </Swiper>
       </div>
 
-<<<<<<< Updated upstream
-      <div className="container mx-auto px-4 text-center">
-=======
       <div className="container mx-auto px-4 lg:px-20 text-start">
->>>>>>> Stashed changes
         <h2 className="text-3xl font-semibold text-white mb-8 tracking-wider">
           Kategori Produk
         </h2>
