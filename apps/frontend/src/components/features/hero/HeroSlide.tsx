@@ -6,7 +6,7 @@ interface HeroSlideProps {
 
 const HeroSlide: React.FC<HeroSlideProps> = ({ image }) => {
   return (
-    <div className="w-[75vw] aspect-video md:aspect-[14/6] rounded-lg overflow-hidden">
+    <div className="w-[75vw] aspect-video md:aspect-[15/7] rounded-lg overflow-hidden">
       <img
         src={image}
         alt="Promotional Banner"

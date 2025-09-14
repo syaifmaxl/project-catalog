@@ -75,7 +75,7 @@ const HomePage: React.FC = () => {
         .swiper-button-prev, .swiper-button-next { color: #ffffff; }
       `}</style>
 
-      <div className="pt-16 pb-10">
+      <div className="pt-16 pb-7">
         <Swiper
           centeredSlides={true}
           slidesPerView={"auto"}
@@ -109,7 +109,7 @@ const HomePage: React.FC = () => {
         </Swiper>
       </div>
 
-      <div className="container mx-auto px-4 text-center">
+      <div className="container mx-auto px-20 text-start">
         <h2 className="text-3xl font-semibold text-white mb-8 tracking-wider">
           Kategori Produk
         </h2>
