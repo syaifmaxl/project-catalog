@@ -36,32 +36,32 @@ const Footer = () => {
                 Ikuti Kami
               </h3>
               <div className="flex gap-2 sm:gap-3">
-                <div className="group relative p-2 sm:p-3 bg-white/10 backdrop-blur-sm rounded-lg sm:rounded-xl border border-white/20 hover:bg-green-500 transition-all duration-300 cursor-pointer hover:scale-110 hover:border-white/40">
+                <div className="group relative p-2 sm:p-3 bg-white/5 backdrop-blur-sm rounded-lg sm:rounded-xl border border-white/10 hover:bg-white/10 transition-all duration-300 cursor-pointer hover:scale-110 hover:border-white/40">
                   <img
                     src={whatsapp}
                     alt="WhatsApp"
-                    className="w-5 h-5 sm:w-6 sm:h-6 group-hover:brightness-0 group-hover:invert transition-all duration-300"
+                    className="w-5 h-5 sm:w-6 sm:h-6 transition-all duration-300"
                   />
                 </div>
-                <div className="group relative p-2 sm:p-3 bg-white/10 backdrop-blur-sm rounded-lg sm:rounded-xl border border-white/20 hover:bg-pink-500 transition-all duration-300 cursor-pointer hover:scale-110 hover:border-white/40">
+                <div className="group relative p-2 sm:p-3 bg-white/5 backdrop-blur-sm rounded-lg sm:rounded-xl border border-white/10 hover:bg-white/10 transition-all duration-300 cursor-pointer hover:scale-110 hover:border-white/40">
                   <img
                     src={instagram}
                     alt="Instagram"
-                    className="w-5 h-5 sm:w-6 sm:h-6 group-hover:brightness-0 group-hover:invert transition-all duration-300"
+                    className="w-5 h-5 sm:w-6 sm:h-6 transition-all duration-300"
                   />
                 </div>
-                <div className="group relative p-2 sm:p-3 bg-white/10 backdrop-blur-sm rounded-lg sm:rounded-xl border border-white/20 hover:bg-blue-500 transition-all duration-300 cursor-pointer hover:scale-110 hover:border-white/40">
+                <div className="group relative p-2 sm:p-3 bg-white/10 backdrop-blur-sm rounded-lg sm:rounded-xl border border-white/10 hover:bg-white/10 transition-all duration-300 cursor-pointer hover:scale-110 hover:border-white/40">
                   <img
                     src={facebook}
                     alt="Facebook"
-                    className="w-5 h-5 sm:w-6 sm:h-6 group-hover:brightness-0 group-hover:invert transition-all duration-300"
+                    className="w-5 h-5 sm:w-6 sm:h-6 transition-all duration-300"
                   />
                 </div>
-                <div className="group relative p-2 sm:p-3 bg-white/10 backdrop-blur-sm rounded-lg sm:rounded-xl border border-white/20 hover:bg-red-500 transition-all duration-300 cursor-pointer hover:scale-110 hover:border-white/40">
+                <div className="group relative p-2 sm:p-3 bg-white/10 backdrop-blur-sm rounded-lg sm:rounded-xl border border-white/10 hover:bgwhbg-white/10 transition-all duration-300 cursor-pointer hover:scale-110 hover:border-white/40">
                   <img
                     src={youtube}
                     alt="YouTube"
-                    className="w-5 h-5 sm:w-6 sm:h-6 group-hover:brightness-0 group-hover:invert transition-all duration-300"
+                    className="w-5 h-5 sm:w-6 sm:h-6 transition-all duration-300"
                   />
                 </div>
               </div>
