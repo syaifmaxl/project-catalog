@@ -1,6 +1,6 @@
 import { CreateSentDTO, Sent } from "../../domains/sents/entity";
 import { IsentRepository } from "../../domains/sents/repository";
-import { prisma } from "../../server";
+import { prisma } from "../../config/prisma";
 
 export default class SentsRepository implements IsentRepository {
     getAllSents = async (): Promise<Sent[]> => {

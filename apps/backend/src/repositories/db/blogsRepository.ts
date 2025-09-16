@@ -1,6 +1,6 @@
 import { Blog, CreateBlogDTO, UpdateBlogDTO } from "../../domains/blogs/entity";
 import { IblogsRepository } from "../../domains/blogs/repository";
-import { prisma } from "../../server"
+import { prisma } from "../../config/prisma";
 
 export default class BlogsRepository implements IblogsRepository{
     async getAllBlogs(): Promise<Blog[]> {

@@ -1,6 +1,6 @@
 import { Category, CreateCategoryDTO } from "../../domains/categories/entity";
 import { IcategoryReppository } from "../../domains/categories/repository";
-import { prisma } from "../../server";
+import { prisma } from "../../config/prisma";
 
 export default class CategoriesRepository implements IcategoryReppository {
 
