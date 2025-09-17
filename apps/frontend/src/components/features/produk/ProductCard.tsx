@@ -56,11 +56,11 @@ const ProductCard: React.FC<ProductCardProps> = ({
 
   return (
     <Link to={`/product/${id}`} className="block group">
-      <div className="relative h-full flex flex-col bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100 hover:border-amber-200">
-        <div className="absolute inset-0 bg-gradient-to-br from-amber-50/30 via-white to-amber-50/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-        <div className="absolute inset-0 rounded-xl border-2 border-transparent group-hover:border-amber-300 transition-all duration-500 pointer-events-none" />
+      <div className="relative h-full flex flex-col bg-white/10 backdrop-blur-md rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-white/20 hover:border-amber-200/50">
+        <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+        <div className="absolute inset-0 rounded-xl border-2 border-transparent group-hover:border-amber-300/30 transition-all duration-500 pointer-events-none" />
 
-        <div className="relative bg-gradient-to-br from-gray-50 to-gray-100 aspect-square">
+        <div className="relative bg-gradient-to-br from-white/5 to-white/10 aspect-square">
           <img
             src={image}
             alt={title}
@@ -87,7 +87,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
           )}
           <button
             onClick={handleFavoriteClick}
-            className={`absolute z-20 bg-white/80 backdrop-blur-sm rounded-full shadow-lg hover:bg-white hover:scale-110 transition-all duration-300 ${
+            className={`absolute z-20 bg-white/50 backdrop-blur-sm rounded-full shadow-lg hover:bg-white/30 hover:scale-110 transition-all duration-300 ${
               compact ? "bottom-2 right-2 p-1.5" : "bottom-3 right-3 p-2"
             }`}
             aria-label={
@@ -96,7 +96,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
           >
             <Heart
               className={`${compact ? "h-3.5 w-3.5" : "h-4 w-4"} ${
-                isFavorite ? "fill-red-500 text-red-500" : "text-gray-500"
+                isFavorite ? "fill-red-500 text-red-500" : "text-gray-600"
               }`}
             />
           </button>
@@ -109,13 +109,13 @@ const ProductCard: React.FC<ProductCardProps> = ({
         >
           <div className="flex items-center gap-2">
             <div className="flex items-center gap-0.5">{renderStars()}</div>
-            <span className="text-gray-500 font-medium text-xs">
+            <span className="text-white font-medium text-xs">
               ({rating})
             </span>
           </div>
 
           <h3
-            className={`flex-grow font-semibold text-gray-800 leading-tight line-clamp-2 group-hover:text-amber-700 transition-colors duration-300 ${
+            className={`flex-grow font-semibold text-gray-200 leading-tight line-clamp-2 group-hover:text-amber-300 transition-colors duration-300 ${
               compact ? "text-sm" : "text-base"
             }`}
           >
@@ -126,7 +126,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
             <div>
               <div className="flex items-baseline gap-2">
                 <span
-                  className={`font-bold text-gray-900 ${
+                  className={`font-bold text-gray-50 ${
                     compact ? "text-base" : "text-xl"
                   }`}
                 >
@@ -143,7 +143,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
                 )}
               </div>
               {originalPrice && calculateSavings() > 0 && (
-                <div className="text-xs text-green-600 font-medium mt-1">
+                <div className="text-xs text-green-400 font-medium mt-1">
                   Hemat Rp {formatPrice(calculateSavings())}
                 </div>
               )}
@@ -177,6 +177,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
       </div>
     </Link>
   );
+
 };
 
 export default ProductCard;

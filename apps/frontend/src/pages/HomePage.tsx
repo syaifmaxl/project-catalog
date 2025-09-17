@@ -5,6 +5,7 @@ import { FeaturedProductsSection } from "../components/section/FeaturedProductsS
 import { FeaturedProductBestSeller } from "../components/section/FeaturedProductsBestSeller";
 import { FeaturedNewProductSection } from "../components/section/FeaturedNewProductSection";
 import { FeaturedAllProductSection } from "../components/section/FeaturedAllProductSection";
+import { BannerProductSection } from "../components/section/BannerProductSection";
 
 const HomePage: React.FC = () => {
   return (
@@ -19,6 +20,7 @@ const HomePage: React.FC = () => {
       <CategoriesSection />
       <FeaturedProductsSection />
       <FeaturedProductBestSeller />
+      <BannerProductSection />
       <FeaturedNewProductSection />
       <FeaturedAllProductSection />
     </div>
