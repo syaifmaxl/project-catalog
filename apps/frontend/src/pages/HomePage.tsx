@@ -2,6 +2,9 @@ import React from "react";
 import { HeroSection } from "../components/section/HeroSection";
 import { CategoriesSection } from "../components/section/CategoriesSection";
 import { FeaturedProductsSection } from "../components/section/FeaturedProductsSection";
+import { FeaturedProductBestSeller } from "../components/section/FeaturedProductsBestSeller";
+import { FeaturedNewProductSection } from "../components/section/FeaturedNewProductSection";
+import { FeaturedAllProductSection } from "../components/section/FeaturedAllProductSection";
 
 const HomePage: React.FC = () => {
   return (
@@ -15,6 +18,9 @@ const HomePage: React.FC = () => {
       <HeroSection />
       <CategoriesSection />
       <FeaturedProductsSection />
+      <FeaturedProductBestSeller />
+      <FeaturedNewProductSection />
+      <FeaturedAllProductSection />
     </div>
   );
 };
