@@ -1,6 +1,6 @@
 import { CreateProductDTO, PictureProduct, Product, UpdateProductDTO } from "../../domains/products/entity";
 import { IproductsRepository } from "../../domains/products/repository";
-import { prisma } from "../../server";
+import { prisma } from "../../config/prisma";
 
 export default class ProductsRepository implements IproductsRepository {
     getAllProducts(): Promise<Product[]> {

@@ -1,6 +1,6 @@
 import { CreateDiscountDTO, Discount } from "../../domains/discounts/entitty";
 import { IdiscountRepository } from "../../domains/discounts/repository";
-import { prisma } from "../../server";
+import { prisma } from "../../config/prisma";
 
 export default class DiscountsRepository implements IdiscountRepository {
     async getAllDiscountProducts(): Promise<Discount[]> {
