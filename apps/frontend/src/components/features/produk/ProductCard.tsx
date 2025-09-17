@@ -60,11 +60,12 @@ const ProductCard: React.FC<ProductCardProps> = ({
         <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
         <div className="absolute inset-0 rounded-xl border-2 border-transparent group-hover:border-amber-300/30 transition-all duration-500 pointer-events-none" />
 
-        <div className="relative bg-gradient-to-br from-white/5 to-white/10 aspect-square">
+        <div className="relative bg-gradient-to-br from-white/5 to-white/10 aspect-square overflow-hidden">
           <img
             src={image}
             alt={title}
-            className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700 loading='lazy"
+            className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700"
+            loading="lazy"
           />
           {discount && (
             <div
