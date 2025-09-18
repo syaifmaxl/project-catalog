@@ -11,7 +11,7 @@ const CategoryCard: React.FC<CategoryCardProps> = ({ image, name }) => {
     <div
       className="relative group overflow-hidden rounded-lg cursor-pointer
                    w-38 h-44 flex-shrink-0
-                   lg:w-full lg:h-full lg:aspect-[4/5]"
+                   lg:w-full lg:h-full lg:aspect-[4/4]"
     >
       <Link to={`/detail-kategori/${name.toLowerCase()}`}>
         <img

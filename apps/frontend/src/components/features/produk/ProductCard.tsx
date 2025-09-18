@@ -1,6 +1,6 @@
 import React, { type JSX } from "react";
 import { Link } from "react-router-dom";
-import { Heart, ShoppingBag, Star, Sparkles } from "lucide-react";
+import { Heart, MessageCircleMore, ShoppingCart, Star, Sparkles } from "lucide-react";
 import type { ProductCardProps } from "./types";
 
 const ProductCard: React.FC<ProductCardProps> = ({
@@ -153,21 +153,21 @@ const ProductCard: React.FC<ProductCardProps> = ({
             <div className={`flex pt-2 ${compact ? "gap-2" : "gap-2"}`}>
               <button
                 onClick={handleBuyNow}
-                className={`w-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-[1.02] flex items-center justify-center gap-1.5 ${
+                className={`w-full cursor-pointer bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-[1.02] flex items-center justify-center gap-1.5 ${
                   compact ? "py-2 px-2 text-xs" : "py-2.5 px-4 text-sm"
                 }`}
               >
-                <ShoppingBag className={compact ? "h-3.5 w-3.5" : "h-4 w-4"} />
+                <MessageCircleMore className={compact ? "h-3.5 w-3.5" : "h-4 w-4"} />
                 <span>{compact ? "Beli" : "Beli Sekarang"}</span>
               </button>
               <button
                 onClick={handleAddToCart}
-                className={`border-2 border-amber-200 hover:border-amber-300 text-amber-700 hover:text-amber-800 bg-amber-50/50 hover:bg-amber-50 rounded-lg font-semibold transition-all duration-300 ${
+                className={`border-2 cursor-pointer border-gray-400 hover:border-amber-300 text-gray-100 hover:text-amber-800 bg-amber-50/50 hover:bg-amber-50 rounded-lg font-semibold transition-all duration-300 ${
                   compact ? "px-2.5 text-xs" : "px-4"
                 }`}
               >
                 {compact ? (
-                  <ShoppingBag className="h-3.5 w-3.5" />
+                  <ShoppingCart className="h-3.5 w-3.5" />
                 ) : (
                   "+ Keranjang"
                 )}

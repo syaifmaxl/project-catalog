@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { featuredProducts } from "../data/placeholder-data";
 import type { Product } from "../components/features/produk/types";
-import { Star, Minus, Plus, ShoppingBag, Heart } from "lucide-react";
+import { Star, Minus, Plus, ShoppingCart, MessageCircleMore, Heart } from "lucide-react";
 import  ProductDescription  from "../components/features/produk/ProductDescription";
 import { ProductReviews } from "../components/features/produk/ProductReviews";
 
@@ -13,11 +13,12 @@ type Tab = "description" | "reviews";
 
 const ActionButtons: React.FC = () => (
   <div className="grid grid-cols-2 gap-4">
-    <button className="bg-amber-500/20 border border-amber-500 text-amber-400 font-semibold py-3 rounded-lg hover:bg-amber-500/30 transition-colors flex items-center justify-center gap-2">
-      <ShoppingBag size={20} />
+    <button className="bg-amber-500/20 cursor-pointer border border-amber-500 text-amber-400 font-semibold py-3 rounded-lg hover:bg-amber-500/30 transition-colors flex items-center justify-center gap-2">
+      <ShoppingCart size={20} />
       Keranjang
     </button>
-    <button className="bg-amber-500 text-slate-900 font-bold py-3 rounded-lg hover:bg-amber-600 transition-colors">
+    <button className="bg-amber-500 cursor-pointer text-slate-900 font-bold py-3 rounded-lg hover:bg-amber-600 transition-colors flex items-center justify-center gap-2">
+      <MessageCircleMore size={20} />
       Beli Sekarang
     </button>
   </div>
