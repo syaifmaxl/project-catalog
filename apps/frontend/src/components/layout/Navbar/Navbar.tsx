@@ -23,8 +23,7 @@ const Navbar: React.FC = () => {
     >
       <a
         href='#'
-        className='text-2xl font-bold text-white tracking-wider'
-      >
+        className="font-extrabold uppercase text-2xl text-center bg-gradient-to-r from-blue-500 to-cyan-400 text-transparent bg-clip-text">
         SARUNG
       </a>
 
@@ -33,7 +32,7 @@ const Navbar: React.FC = () => {
           <li key={link.label}>
             <a
               href={link.href}
-              className='text-white hover:text-cyan-300 transition-colors duration-300'
+              className='text-gray-300 font-bold hover:text-cyan-300 transition-colors duration-300'
             >
               {link.label}
             </a>
@@ -42,16 +41,9 @@ const Navbar: React.FC = () => {
       </ul>
 
       <div className='flex items-center gap-4'>
-        <a href='#' className='text-white relative'>
-          <p className='absolute -top-2 -right-2 bg-red-600 w-5 h-5 flex justify-center items-center rounded-full text-xs font-semibold'>1</p>
+        <a href='#' className='text-white relative border p-1.5 rounded-full border-gray-300'>
+          <p className='absolute -top-2 -right-2 bg-red-700 w-5 h-5 flex justify-center items-center rounded-full text-xs font-semibold'>1</p>
           <ShoppingCart />
-        </a>
-
-        <a
-          href='#aksi'
-          className='hidden md:inline-block bg-cyan-500 text-white px-5 py-2 rounded-full hover:bg-cyan-600 transition-transform duration-300 hover:scale-105'
-        >
-          Login
         </a>
 
         <button
